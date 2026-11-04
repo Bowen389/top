@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/scan.yml']
+    paths: ['.github/workflows/scan.yml', 'daily.py']
 permissions:
   contents: write
 concurrency:
