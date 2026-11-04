@@ -1,0 +1,79 @@
+{
+  "accounts": {
+    "v3": {
+      "cash": 200000,
+      "positions": {},
+      "equity": 200000,
+      "peak": 200000
+    },
+    "s2": {
+      "cash": 200000,
+      "positions": {},
+      "equity": 200000,
+      "peak": 200000
+    },
+    "bf": {
+      "cash": 200000,
+      "positions": {},
+      "equity": 200000,
+      "peak": 200000
+    },
+    "lh": {
+      "cash": 200000,
+      "positions": {},
+      "equity": 200000,
+      "peak": 200000
+    },
+    "n3": {
+      "cash": 200000,
+      "positions": {},
+      "equity": 200000,
+      "peak": 200000
+    },
+    "fb": {
+      "cash": 200000,
+      "positions": {},
+      "equity": 200000,
+      "peak": 200000
+    }
+  },
+  "events": [
+    {
+      "strategy": "v3",
+      "date": "2026-11-04",
+      "status": "UNVERIFIED",
+      "reason": "未存档前一交易日预案"
+    },
+    {
+      "strategy": "s2",
+      "date": "2026-11-04",
+      "status": "UNVERIFIED",
+      "reason": "未存档前一交易日预案"
+    },
+    {
+      "strategy": "bf",
+      "date": "2026-11-04",
+      "status": "UNVERIFIED",
+      "reason": "未存档前一交易日预案"
+    },
+    {
+      "strategy": "lh",
+      "date": "2026-11-04",
+      "status": "UNVERIFIED",
+      "reason": "未存档前一交易日预案"
+    },
+    {
+      "strategy": "n3",
+      "date": "2026-11-04",
+      "status": "UNVERIFIED",
+      "reason": "未存档前一交易日预案"
+    },
+    {
+      "strategy": "fb",
+      "date": "2026-11-04",
+      "status": "UNVERIFIED",
+      "reason": "未存档前一交易日预案"
+    }
+  ],
+  "last_session": "2026-11-04"
+}
