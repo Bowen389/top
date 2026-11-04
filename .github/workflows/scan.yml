@@ -1,8 +1,8 @@
 name: 六策略盘后预选与模拟记账
 on:
   schedule:
-    - cron: '0,10 9 * * 1-5'
-    - cron: '5 11 * * 1-5'
+    - cron: '0 9 * * 1-5'
+    - cron: '30 9 * * 1-5'
   workflow_dispatch:
   push:
     branches: [main]
@@ -31,7 +31,14 @@ jobs:
       - name: 核验扫描规则
         run: python -m unittest discover -s stock_pool/reconstructed
       - name: 扫描及记账
-        run: python daily.py
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          if [ "$SCHEDULE" = '30 9 * * 1-5' ]; then
+            python daily.py --retry-missing
+          else
+            python daily.py
+          fi
       - name: 保存日报与台账
         run: |
           git add reports

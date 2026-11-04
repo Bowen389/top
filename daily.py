@@ -75,8 +75,10 @@ def run(script):
     subprocess.run([sys.executable, script], cwd=CORE, check=True, timeout=450)
 
 
-def market_scans(day, days, indices, add):
-    failures = package(days[-120:])
+def market_scans(day, days, add, needed):
+    if not needed:
+        return
+    failures = package(days[-120:] if "fb" in needed else days[-85:])
     window = days[-85:]
     cache = CORE.parent / "reports"
     write(cache / "sessions_85.json", dict(asof=day, dates=window,
@@ -84,15 +86,18 @@ def market_scans(day, days, indices, add):
     stamp = day.replace("-", "")
     if any(d in failures for d in window):
         for key in ("v3", "s2", "bf"):
+            if key not in needed:
+                continue
             add(key, error=f"通达信日包缺失：{[d for d in window if d in failures]}")
     else:
         def v3():
             run("scan_v3.py")
             data = read(cache / f"v3_prefilter_{stamp}.json")
             gate = data["market_gate"]
-            if gate["status"] != "ok":
-                raise ValueError("沪深300 MA20未核验")
-            add("v3", data["raw_candidates"] if gate["gate_allow"] else [], meta=gate)
+            add("v3", data["raw_candidates"] if gate.get("gate_allow") else [],
+                meta={**gate, "raw_candidates": data["raw_candidates"],
+                      "scan_counts": data["status_counts"]},
+                error="沪深300 MA20未核验" if gate["status"] != "ok" else None)
 
         def s2_bf():
             run("scan_live_tdx.py")
@@ -102,21 +107,30 @@ def market_scans(day, days, indices, add):
                              key=lambda r: (-r["trigger_pct"], r["code"])),
                 meta={"market_cap_unverified": unknown, "scan_counts": data["status_counts"]["s2"]}, provisional=bool(unknown))
             selected = data["bf_selected_pool"]
+            if "bf" not in needed:
+                return
+            meta = {**data["market_gate_3050"], "raw_candidates": data["bf_raw"],
+                    "selected_pool": selected, "scan_counts": data["status_counts"]["bf"]}
             if selected:
                 run("audit_bf_limits.py")
                 audit = read(cache / f"bf_limit_audit_{stamp}.json")
                 verified = {r["code"] for r in audit["records"] if r["quote_status"] == "verified"}
                 if any(r["code"] not in verified for r in selected):
-                    add("bf", error="反包池存在尚未核验的涨停价，等待复核")
+                    meta["unverified"] = [r["code"] for r in selected if r["code"] not in verified]
+                    add("bf", meta=meta, error="反包池存在尚未核验的涨停价，等待复核")
                     return
-            add("bf", selected, meta=data["market_gate_3050"])
+            add("bf", selected, meta=meta)
 
         for keys, function in [(("v3",), v3), (("s2", "bf"), s2_bf)]:
+            if not needed.intersection(keys):
+                continue
             try:
                 function()
             except Exception as exc:
                 for key in keys:
                     add(key, error=str(exc))
+    if "fb" not in needed:
+        return
     try:
         if failures:
             raise ValueError(f"120日上市资格窗口有缺失：{list(failures)}")
@@ -134,28 +148,150 @@ def dragon_scans(day, previous, add):
         confirmed = lh.fetch_snapshot(day)
         if lh.signature(current) != lh.signature(confirmed):
             raise ValueError("两次披露快照不一致")
-        rows, skipped, _ = lh.screen(day, confirmed)
-        add("lh", rows, meta={"isolated_rows": skipped}, provisional=True)
+        rows, skipped, audit = lh.screen(day, confirmed)
     except Exception as exc:
         for key in ("lh", "n3"):
             add(key, error=str(exc))
         return
+    if not rows:
+        add("lh", [], meta={"isolated_rows": skipped, "seat_audit": audit})
+        add("n3", [])
+        return
+    n3_error = None
     try:
         last = lh.fetch_snapshot(previous)
         market_data.package(previous)
         market_data.package(day)
         base = n3_base(day, confirmed, bars(day))
         before = n3_base(previous, last, bars(previous))
-        add("n3", n3_candidates(base, before), meta={"base_count": len(base)}, provisional=True)
+        n3 = {r["code"]: r["label"] for r in n3_candidates(base, before)}
     except Exception as exc:
-        add("n3", error=str(exc))
+        n3, n3_error = {}, str(exc)
+    for row in rows:
+        code = row["code"]
+        row["n3_tag"] = ("待核验" if n3_error else n3[code] if code in n3 else
+                         "未通过N3基础席位或有效成交条件" if code not in base else
+                         "前一交易日已入基础池" if code in before else
+                         "涨幅位于[7%, 9%)" if 7 <= base[code]["gain_pct"] < 9 else
+                         "换手率未超过10%")
+        row["volume_tag"] = "待核验"
+    add("lh", rows, meta={"isolated_rows": skipped, "seat_audit": audit, "n3_error": n3_error},
+        provisional=True)
+    # Existing N3 positions continue to settle. New candidates enter only the base flow.
+    add("n3", [])
+
+
+def add_volume_tags(section, days, package):
+    rows = section.get("candidates", [])
+    if not rows:
+        return
+    window = days[-150:]
+    failures = package(window)
+    codes = {row["code"] for row in rows}
+    panels = []
+    for day in window:
+        if day in failures:
+            continue
+        frame = pd.read_csv(market_data.ROOT / (day + ".csv"), dtype={"code": str})
+        if set(frame.date) != {day} or frame.code.duplicated().any():
+            failures[day] = "日包日期或代码异常"
+            continue
+        panels.append(frame[frame.code.isin(codes) & frame.open.gt(0) & frame.volume.gt(0)])
+    panel = pd.concat(panels) if panels else pd.DataFrame(columns=["code", "date"])
+    for row in rows:
+        history = panel[panel.code == row["code"]].sort_values("date").tail(121)
+        if len(history) < 121 or history.date.iloc[-1] != days[-1] or any(
+                day >= history.date.iloc[0] for day in failures):
+            row["volume_tag"] = "待核验：有效日线不足或窗口缺档"
+            continue
+        adjusted = market_data.prepare(history)
+        if len(adjusted) != 121:
+            row["volume_tag"] = "待核验：复权数据不足"
+            continue
+        prior, current = adjusted.iloc[:-1], adjusted.iloc[-1]
+        mean_volume, low = prior.volume.tail(20).mean(), prior.adj_low.min()
+        if mean_volume <= 0 or low <= 0:
+            row["volume_tag"] = "待核验：分母无效"
+            continue
+        ratio, multiple = current.volume / mean_volume, current.adj_close / low
+        row["volume_ratio_20"], row["low_multiple_120"] = float(ratio), float(multiple)
+        rejected = [label for failed, label in [(ratio >= 3, "量比≥3"), (multiple >= 4, "低点倍数≥4")] if failed]
+        row["volume_tag"] = "未通过：" + "、".join(rejected) if rejected else "符合量价"
+    section["provisional"] = bool(section["meta"].get("n3_error")) or any(
+        row["volume_tag"].startswith("待核验") for row in rows)
+
+
+def audit_lines(key, section):
+    meta = section["meta"]
+    if key == "v3" and "raw_candidates" in meta:
+        allowed = meta.get("gate_allow")
+        gate = "通过" if allowed else "门控待核验" if allowed is None else "门控拦截"
+        if allowed is not None:
+            yield f"沪深300收盘 {meta['close']:.2f} / MA20 {meta['ma20']:.2f}（偏离 {meta['deviation_pct']:+.2f}%）：{gate}。"
+        if not allowed:
+            for rank, row in enumerate(meta["raw_candidates"], 1):
+                yield f"- 形态第 {rank}：{row['code']} {row['name']} · {priority(key, row)} · {gate}"
+    if key == "bf" and "selected_pool" in meta:
+        gate = "通过，次日先判BF" if meta["market_gate_pass"] else "未通过，按原规则走G3"
+        yield f"自建指数 {meta['I']:.4f} / MA20 {meta['MA20']:.4f}（偏离 {meta['deviation_pct']:+.2f}%）：{gate}。"
+        if section.get("error"):
+            for rank, row in enumerate(meta["selected_pool"], 1):
+                yield f"- 待核验第 {rank}：{row['code']} {row['name']} · {priority(key, row)}"
+        selected = {r["code"] for r in meta["selected_pool"]}
+        for row in meta["raw_candidates"]:
+            if row["code"] not in selected:
+                why = "已有A档，B档不参与" if row["category"] == "B" else "评分不足2分"
+                yield f"- 排除：{row['code']} {row['name']} · {why} · {priority(key, row)}"
+    if key == "lh":
+        for field, label in [("n3_error", "N3"), ("volume_error", "量价")]:
+            if meta.get(field):
+                yield f"{label}待核验：{meta[field]}"
+        selected = {r["code"] for r in section["candidates"]}
+        seen = set()
+        translations = {"institution_on_sell_side": "卖榜有机构席位",
+                        "gain_below_5pct": "涨幅低于5%",
+                        "no_qualifying_institution_buy": "机构买入条件未达标"}
+        for row in meta.get("isolated_rows", []) + meta.get("seat_audit", []):
+            identity = (row["code"], row["reason"])
+            if row["code"] not in selected and identity not in seen:
+                seen.add(identity)
+                yield f"- 排除或隔离：{row['code']} {row.get('name', '')} · {translations.get(row['reason'], row['reason'])}"
+    if meta.get("scan_counts"):
+        yield "扫描状态汇总：" + "、".join(f"{k} {v}" for k, v in meta["scan_counts"].items())
+
+
+def priority(key, row):
+    if key == "lh":
+        fields = [f"合格机构买入 {row['qualifying_amount_yuan']/1e8:.2f}亿",
+                  f"N3 {row.get('n3_tag', '待核验')}", row.get("volume_tag", "待核验")]
+        if "volume_ratio_20" in row:
+            fields.append(f"量比 {row['volume_ratio_20']:.2f} / 低点倍数 {row['low_multiple_120']:.2f}")
+        return " · ".join(fields)
+    if key == "v3":
+        names = ("涨幅与5日放量", "60日突破且放量1.5倍", "60日突破且放量1.2倍")
+        triggers = "、".join(name for name, passed in zip(names, row["conditions"]) if passed)
+        return f"触发 {row['strength']} 项（{triggers}），涨幅 {row['gain']:+.2%}"
+    if key == "bf":
+        blocks = []
+        if row["S"] < 2e8:
+            blocks.append("20日均额不足2亿")
+        if row["previous_broken_limit"]:
+            blocks.append("前一日触板未封")
+        route = "BF单票预筛通过" if not blocks else "仅G3预筛：" + "、".join(blocks)
+        names = ("前6至前2日仅1次涨停", "20日均额≥2.5亿", "信号日未低开")
+        points = "、".join(name for name, earned in zip(names, row["score_bits"]) if earned)
+        return f"{row['category']}档 {row['score']}分（{points or '无得分项'}），20日均额 {row['S']/1e8:.2f}亿 · {route}"
+    if key == "s2":
+        return f"首板 {row['first_date']}，信号涨幅 {row['trigger_pct']:+.2f}%，市值已核验"
+    kind = "C2" if row["pos60_med"] < .7 else "C1"
+    return f"{kind}，位置 {row['pos60_med']:.3f}，同档待开盘缺口排序"
 
 
 def publish(plan, book, note):
     day = plan["date"]
-    lines = [f"# {day} 六策略盘后预案", "", f"次一交易日：{plan['next_session']}。{note}", "",
+    lines = [f"# {day} 盘后策略预案", "", f"次一交易日：{plan['next_session']}。{note}", "",
              "买点均为条件计划。逐笔成交为模拟。", ""]
-    for key in ("lh", "n3", "v3", "s2", "bf", "fb"):
+    for key in ("lh", "v3", "s2", "bf", "fb"):
         name, rule = STRATEGIES[key]
         section = plan["strategies"][key]
         lines += [f"## {name}", "", f"次日买点：{rule}。", ""]
@@ -167,13 +303,12 @@ def publish(plan, book, note):
             if section["meta"].get("market_cap_unverified"):
                 lines.append(f"另有 {len(section['meta']['market_cap_unverified'])} 个市值待核验。")
             lines += [f"{status} · {len(rows)} 个候选", ""]
-            for row in rows:
-                detail = (f" · {row['label']}" if "label" in row else
-                          f" · {row['category']}" if "category" in row else
-                          f" · {'C2' if row['pos60_med'] < .7 else 'C1'}"
-                          if "pos60_med" in row else "")
-                lines.append(f"- {row['code']} {row['name']}{detail}")
+            for rank, row in enumerate(rows, 1):
+                prefix = "待开盘排序" if key == "fb" else f"第 {rank}"
+                lines.append(f"- {prefix}：{row['code']} {row['name']} · {priority(key, row)}")
             lines.append("")
+        lines.extend(audit_lines(key, section))
+        lines.append("")
         positions = book["accounts"][key]["positions"]
         if positions:
             lines += ["持仓：" + "、".join(f"{p['code']}（{p['due']} 到期）"
@@ -189,6 +324,7 @@ def publish(plan, book, note):
 def main():
     now = dt.datetime.now(ZoneInfo("Asia/Shanghai"))
     day = now.date().isoformat()
+    retry_only = "--retry-missing" in sys.argv
     if now.weekday() >= 5 or now.time() < dt.time(15, 5):
         return
     from exchange_calendars import get_calendar
@@ -204,7 +340,14 @@ def main():
                                              strategies={}))
     plan["updated_at"] = now.isoformat()
 
+    def needs(key):
+        section = plan["strategies"].get(key)
+        return not retry_only or not section or bool(section.get("error") or section.get("provisional")) or (
+            key == "lh" and "seat_audit" not in section["meta"])
+
     def add(key, rows=None, *, meta=None, error=None, provisional=False):
+        if not needs(key):
+            return
         old = plan["strategies"].get(key, {})
         if error and old.get("error", True) is None:
             old["retry_error"] = error
@@ -213,7 +356,12 @@ def main():
                                        error=error, provisional=provisional)
 
     previous = cal.previous_session(day).date().isoformat()
-    dragon_scans(day, previous, add)
+    refresh_dragon = needs("lh")
+    if refresh_dragon:
+        dragon_scans(day, previous, add)
+    # Keep the legacy strategy key for paper settlement, with no new N3 entries.
+    plan["strategies"]["n3"] = dict(candidates=[], meta={}, error=None, provisional=False)
+    needed = {key for key in ("v3", "s2", "bf", "fb") if needs(key)}
 
     try:
         indices = index("sh000300")
@@ -221,9 +369,16 @@ def main():
         if not days or days[-1] != day:
             raise ValueError("沪深300尚未提供今日收盘日线")
         previous = days[-2]
-        market_scans(day, days, indices, add)
+        market_scans(day, days, add, needed)
+        dragon = plan["strategies"].get("lh", {})
+        if refresh_dragon and dragon.get("candidates"):
+            try:
+                add_volume_tags(dragon, days, package)
+            except Exception as exc:
+                dragon["provisional"] = True
+                dragon["meta"]["volume_error"] = str(exc)
     except Exception as exc:
-        for key in ("v3", "s2", "bf", "fb"):
+        for key in needed:
             add(key, error=str(exc))
 
     # Reprocess a pending market session before advancing past it.
