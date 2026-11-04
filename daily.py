@@ -224,12 +224,13 @@ def add_volume_tags(section, days, package):
 def audit_lines(key, section):
     meta = section["meta"]
     if key == "v3" and "raw_candidates" in meta:
+        yield "排序：触发项数降序，其次信号日涨幅降序，再按股票代码升序。展示三项全中及两项前3。"
         allowed = meta.get("gate_allow")
         gate = "通过" if allowed else "门控待核验" if allowed is None else "门控拦截"
         if allowed is not None:
             yield f"沪深300收盘 {meta['close']:.2f} / MA20 {meta['ma20']:.2f}（偏离 {meta['deviation_pct']:+.2f}%）：{gate}。"
         if not allowed:
-            for rank, row in enumerate(meta["raw_candidates"], 1):
+            for rank, row in v3_display_rows(meta["raw_candidates"]):
                 yield f"- 形态第 {rank}：{row['code']} {row['name']} · {priority(key, row)} · {gate}"
     if key == "bf" and "selected_pool" in meta:
         gate = "通过，次日先判BF" if meta["market_gate_pass"] else "未通过，按原规则走G3"
@@ -246,24 +247,27 @@ def audit_lines(key, section):
         for field, label in [("n3_error", "N3"), ("volume_error", "量价")]:
             if meta.get(field):
                 yield f"{label}待核验：{meta[field]}"
-        selected = {r["code"] for r in section["candidates"]}
-        seen = set()
-        translations = {"institution_on_sell_side": "卖榜有机构席位",
-                        "gain_below_5pct": "涨幅低于5%",
-                        "no_qualifying_institution_buy": "机构买入条件未达标"}
-        for row in meta.get("isolated_rows", []) + meta.get("seat_audit", []):
-            identity = (row["code"], row["reason"])
-            if row["code"] not in selected and identity not in seen:
-                seen.add(identity)
-                yield f"- 排除或隔离：{row['code']} {row.get('name', '')} · {translations.get(row['reason'], row['reason'])}"
-    if meta.get("scan_counts"):
+    if key == "s2" and meta.get("scan_counts"):
+        counts = meta["scan_counts"]
+        yield f"未触发 {counts.get('no_trigger', 0)} 只，排除 ST {counts.get('excluded_st', 0)} 只，历史日线不全 {counts.get('missing_data', 0)} 只。"
+    elif meta.get("scan_counts"):
         yield "扫描状态汇总：" + "、".join(f"{k} {v}" for k, v in meta["scan_counts"].items())
+
+
+def v3_display_rows(rows):
+    two_hits = 0
+    for rank, row in enumerate(rows, 1):
+        if row["strength"] == 3:
+            yield rank, row
+        elif row["strength"] == 2 and two_hits < 3:
+            yield rank, row
+            two_hits += 1
 
 
 def priority(key, row):
     if key == "lh":
         fields = [f"合格机构买入 {row['qualifying_amount_yuan']/1e8:.2f}亿",
-                  f"N3 {row.get('n3_tag', '待核验')}", row.get("volume_tag", "待核验")]
+                  f"N3判定：{row.get('n3_tag', '待核验')}", row.get("volume_tag", "待核验")]
         if "volume_ratio_20" in row:
             fields.append(f"量比 {row['volume_ratio_20']:.2f} / 低点倍数 {row['low_multiple_120']:.2f}")
         return " · ".join(fields)
@@ -277,7 +281,7 @@ def priority(key, row):
             blocks.append("20日均额不足2亿")
         if row["previous_broken_limit"]:
             blocks.append("前一日触板未封")
-        route = "BF单票预筛通过" if not blocks else "仅G3预筛：" + "、".join(blocks)
+        route = "满足BF个股盘后条件" if not blocks else "BF排除、保留G3资格：" + "、".join(blocks)
         names = ("前6至前2日仅1次涨停", "20日均额≥2.5亿", "信号日未低开")
         points = "、".join(name for name, earned in zip(names, row["score_bits"]) if earned)
         return f"{row['category']}档 {row['score']}分（{points or '无得分项'}），20日均额 {row['S']/1e8:.2f}亿 · {route}"
@@ -303,7 +307,8 @@ def publish(plan, book, note):
             if section["meta"].get("market_cap_unverified"):
                 lines.append(f"另有 {len(section['meta']['market_cap_unverified'])} 个市值待核验。")
             lines += [f"{status} · {len(rows)} 个候选", ""]
-            for rank, row in enumerate(rows, 1):
+            ranked = v3_display_rows(rows) if key == "v3" else enumerate(rows, 1)
+            for rank, row in ranked:
                 prefix = "待开盘排序" if key == "fb" else f"第 {rank}"
                 lines.append(f"- {prefix}：{row['code']} {row['name']} · {priority(key, row)}")
             lines.append("")
