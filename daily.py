@@ -236,7 +236,7 @@ def audit_lines(key, section):
         yield "BF个股盘后条件：20日均成交额至少2亿元，且前一日没有出现触板未封。前一日触板未封不计入A/B评分，但取消BF资格，保留G3资格。BF还需通过市场门控及次日开盘条件。"
     if key == "bf" and "selected_pool" in meta:
         gate = "通过，次日先判BF" if meta["market_gate_pass"] else "未通过，按原规则走G3"
-        yield f"自建指数 {meta['I']:.4f} / MA20 {meta['MA20']:.4f}（偏离 {meta['deviation_pct']:+.2f}%）：{gate}。"
+        yield f"自建指数 {meta['I']:.4f} / MA20 {meta['ma20']:.4f}（偏离 {meta['deviation_pct']:+.2f}%）：{gate}。"
         if section.get("error"):
             for rank, row in enumerate(meta["selected_pool"], 1):
                 yield f"- 待核验第 {rank}：{row['code']} {row['name']} · {priority(key, row)}"
