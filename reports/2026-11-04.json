@@ -1604,11 +1604,277 @@
         },
         "index_basis": "fixed 2026-11-03 non-ST 3050; historical ST may be included; active and valid prior-market-day return required",
         "source": "TDX raw daily packages; no fill for suspensions",
-        "warning": "user-modified research strategy; not the original 3297 frozen universe; no historical backtest validation"
+        "warning": "user-modified research strategy; not the original 3297 frozen universe; no historical backtest validation",
+        "raw_candidates": [
+          {
+            "code": "000530",
+            "name": "冰山冷热",
+            "close": 9.46,
+            "status": "raw",
+            "S": 1412090169.423,
+            "prior_limits": 2,
+            "score_bits": [
+              0,
+              1,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002275",
+            "name": "桂林三金",
+            "close": 17.38,
+            "status": "raw",
+            "S": 113876091.13299999,
+            "prior_limits": 3,
+            "score_bits": [
+              0,
+              0,
+              1
+            ],
+            "score": 1,
+            "category": "discard",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          },
+          {
+            "code": "002636",
+            "name": "金安国纪",
+            "close": 64.41,
+            "status": "raw",
+            "S": 2941835735.9504995,
+            "prior_limits": 2,
+            "score_bits": [
+              0,
+              1,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002741",
+            "name": "光华科技",
+            "close": 19.29,
+            "status": "raw",
+            "S": 602067839.7124999,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002811",
+            "name": "郑中设计",
+            "close": 20.37,
+            "status": "raw",
+            "S": 486351707.0264999,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": true,
+            "bf_static_ok": false
+          },
+          {
+            "code": "002975",
+            "name": "博杰股份",
+            "close": 77.33,
+            "status": "raw",
+            "S": 838221712.28,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "603061",
+            "name": "金海通",
+            "close": 228.69,
+            "status": "raw",
+            "S": 865767028.3,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              0
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "603955",
+            "name": "大千生态",
+            "close": 28.91,
+            "status": "raw",
+            "S": 112402957.8,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              0,
+              0
+            ],
+            "score": 1,
+            "category": "discard",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          },
+          {
+            "code": "605287",
+            "name": "德才股份",
+            "close": 50.52,
+            "status": "raw",
+            "S": 611426356.25,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "605288",
+            "name": "凯迪股份",
+            "close": 72.7,
+            "status": "raw",
+            "S": 148237468.3,
+            "prior_limits": 2,
+            "score_bits": [
+              0,
+              0,
+              1
+            ],
+            "score": 1,
+            "category": "discard",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          },
+          {
+            "code": "605488",
+            "name": "福莱新材",
+            "close": 44.79,
+            "status": "raw",
+            "S": 946429876.9,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              0
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          }
+        ],
+        "selected_pool": [
+          {
+            "code": "002975",
+            "name": "博杰股份",
+            "close": 77.33,
+            "status": "raw",
+            "S": 838221712.28,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "605287",
+            "name": "德才股份",
+            "close": 50.52,
+            "status": "raw",
+            "S": 611426356.25,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002741",
+            "name": "光华科技",
+            "close": 19.29,
+            "status": "raw",
+            "S": 602067839.7124999,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002811",
+            "name": "郑中设计",
+            "close": 20.37,
+            "status": "raw",
+            "S": 486351707.0264999,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": true,
+            "bf_static_ok": false
+          }
+        ],
+        "scan_counts": {
+          "no_raw_signal": 2711,
+          "excluded_basic": 180,
+          "limit_rule_or_ST_unverified": 146,
+          "excluded_liquidity": 126,
+          "raw": 11,
+          "missing_data": 17
+        }
       },
       "error": null,
-      "provisional": false,
-      "retry_error": "反包池存在尚未核验的涨停价，等待复核"
+      "provisional": false
     },
     "fb": {
       "candidates": [
@@ -2188,5 +2454,5 @@
       "provisional": false
     }
   },
-  "updated_at": "2026-11-04T18:14:30.071068+08:00"
+  "updated_at": "2026-11-04T18:31:24.071753+08:00"
 }
