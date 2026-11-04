@@ -31,8 +31,12 @@ def at_limit(code, row, field, up):
 
 
 def event(events, strategy, signal, day, status, **details):
-    events.append(dict(signal_id=f"{strategy}:{signal['signal_date']}:{signal['code']}",
-                       strategy=strategy, date=day, status=status, **signal, **details))
+    record = {**signal, **details}
+    if "reason" in signal:
+        record["signal_reason"] = signal["reason"]
+    record.update(signal_id=f"{strategy}:{signal['signal_date']}:{signal['code']}",
+                  strategy=strategy, date=day, status=status)
+    events.append(record)
 
 
 def evaluate_open(strategy, signal, row):
