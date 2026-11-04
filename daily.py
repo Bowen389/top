@@ -127,11 +127,7 @@ def market_scans(day, days, indices, add):
         add("fb", error=str(exc))
 
 
-def dragon_scans(day, previous, now, add):
-    if now.time() < dt.time(17, 10):
-        for key in ("lh", "n3"):
-            add(key, error="17:10后复核龙虎榜披露")
-        return
+def dragon_scans(day, previous, add):
     try:
         current = lh.fetch_snapshot(day)
         time.sleep(15)
@@ -159,7 +155,8 @@ def publish(plan, book, note):
     day = plan["date"]
     lines = [f"# {day} 六策略盘后预案", "", f"次一交易日：{plan['next_session']}。{note}", "",
              "买点均为条件计划。逐笔成交为模拟。", ""]
-    for key, (name, rule) in STRATEGIES.items():
+    for key in ("lh", "n3", "v3", "s2", "bf", "fb"):
+        name, rule = STRATEGIES[key]
         section = plan["strategies"][key]
         lines += [f"## {name}", "", f"次日买点：{rule}。", ""]
         if section.get("error"):
@@ -216,6 +213,8 @@ def main():
                                        error=error, provisional=provisional)
 
     previous = cal.previous_session(day).date().isoformat()
+    dragon_scans(day, previous, add)
+
     try:
         indices = index("sh000300")
         days = sorted(d for d in indices if d <= day)
@@ -226,7 +225,6 @@ def main():
     except Exception as exc:
         for key in ("v3", "s2", "bf", "fb"):
             add(key, error=str(exc))
-    dragon_scans(day, previous, now, add)
 
     # Reprocess a pending market session before advancing past it.
     if book["last_session"] != day:

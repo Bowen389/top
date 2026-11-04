@@ -1,7 +1,7 @@
 name: 六策略盘后预选与模拟记账
 on:
   schedule:
-    - cron: '0,20 9 * * 1-5'
+    - cron: '0,10 9 * * 1-5'
     - cron: '5 11 * * 1-5'
   workflow_dispatch:
   push:
