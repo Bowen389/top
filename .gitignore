@@ -1,0 +1,4 @@
+__pycache__/
+stock_pool/data/
+stock_pool/reports/*.json
+stock_pool/reports/*.csv

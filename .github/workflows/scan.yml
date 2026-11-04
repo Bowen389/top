@@ -1,0 +1,44 @@
+name: 六策略盘后预选与模拟记账
+on:
+  schedule:
+    - cron: '0,20 9 * * 1-5'
+    - cron: '5 11 * * 1-5'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/scan.yml']
+permissions:
+  contents: write
+concurrency:
+  group: top-daily-main
+  cancel-in-progress: false
+jobs:
+  scan:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: stock_pool/data/prices
+          key: tdx-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: tdx-
+      - run: pip install -r stock_pool/reconstructed/requirements.txt
+      - name: 核验扫描规则
+        run: python -m unittest discover -s stock_pool/reconstructed
+      - name: 扫描及记账
+        run: python daily.py
+      - name: 保存日报与台账
+        if: always()
+        run: |
+          git add reports
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name github-actions[bot]
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Update daily candidates and paper ledger"
+          git pull --rebase
+          git push
