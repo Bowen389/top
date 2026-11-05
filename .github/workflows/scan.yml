@@ -1,8 +1,8 @@
 name: 六策略盘后预选与模拟记账
 on:
   schedule:
-    - cron: '0 9 * * 1-5'
-    - cron: '30 9 * * 1-5'
+    - cron: '0 9 * * MON-FRI'
+    - cron: '30 9 * * MON-FRI'
   workflow_dispatch:
   push:
     branches: [main]
@@ -34,7 +34,7 @@ jobs:
         env:
           SCHEDULE: ${{ github.event.schedule }}
         run: |
-          if [ "$SCHEDULE" = '30 9 * * 1-5' ]; then
+          if [ "$SCHEDULE" = '30 9 * * MON-FRI' ]; then
             python daily.py --retry-missing
           else
             python daily.py
