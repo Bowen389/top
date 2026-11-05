@@ -232,6 +232,12 @@ def audit_lines(key, section):
         if not allowed:
             for rank, row in v3_display_rows(meta["raw_candidates"]):
                 yield f"- 形态第 {rank}：{row['code']} {row['name']} · {priority(key, row)} · {gate}"
+    if key == "fb" and "B_MA20" in meta:
+        deviation = meta["B_MA20"]
+        decision = "通过" if deviation < 0 else "门控拦截，当日不开新仓"
+        yield f"中证1000相对MA20偏离 {deviation:+.4%}。规则要求严格低于MA20：{decision}。"
+        if deviation >= 0:
+            yield "当前0候选由指数门控直接返回，个股首板形态未继续筛选。"
     if key == "bf":
         yield "BF个股盘后条件：20日均成交额至少2亿元，且前一日没有出现触板未封。前一日触板未封不计入A/B评分，但取消BF资格，保留G3资格。BF还需通过市场门控及次日开盘条件。"
     if key == "bf" and "selected_pool" in meta:
