@@ -318,8 +318,8 @@ def publish(plan, book, note):
         lines.append("")
         positions = book["accounts"][key]["positions"]
         if positions:
-            lines += ["持仓：" + "、".join(f"{p['code']}（{p['due']} 到期）"
-                                            for p in positions.values()), ""]
+            lines += ["持仓：" + "、".join(f"{code}（{p['due']} 到期）"
+                                            for code, p in positions.items()), ""]
     md = "\n".join(lines)
     (REPORTS / f"{day}.md").write_text(md, encoding="utf8")
     (REPORTS / "latest.md").write_text(md, encoding="utf8")
