@@ -1,12 +1,12 @@
 name: 六策略盘后预选与模拟记账
 on:
   schedule:
-    - cron: '0 9 * * MON-FRI'
+    - cron: '50 8 * * MON-FRI'
     - cron: '30 9 * * MON-FRI'
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/scan.yml', 'daily.py']
+    paths: ['.github/workflows/scan.yml', 'daily.py', 'scripts/postclose_guard.py', '.github/top-watchdog.json']
 permissions:
   contents: write
 concurrency:
@@ -19,27 +19,33 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Read latest main after waiting for concurrent scans
+        run: git pull --ff-only origin main
+      - name: Check current post-close report and ledger
+        id: guard
+        run: echo "needed=$(python scripts/postclose_guard.py)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.needed == 'true'
         with:
           python-version: '3.11'
       - uses: actions/cache@v4
+        if: steps.guard.outputs.needed == 'true'
         with:
           path: stock_pool/data/prices
           key: tdx-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: tdx-
       - run: pip install -r stock_pool/reconstructed/requirements.txt
+        if: steps.guard.outputs.needed == 'true'
       - name: 核验扫描规则
-        run: python -m unittest discover -s stock_pool/reconstructed
-      - name: 扫描及记账
-        env:
-          SCHEDULE: ${{ github.event.schedule }}
+        if: steps.guard.outputs.needed == 'true'
         run: |
-          if [ "$SCHEDULE" = '30 9 * * MON-FRI' ]; then
-            python daily.py --retry-missing
-          else
-            python daily.py
-          fi
+          python -m unittest test_postclose_guard
+          python -m unittest discover -s stock_pool/reconstructed
+      - name: 扫描及记账
+        if: steps.guard.outputs.needed == 'true'
+        run: python daily.py --retry-missing
       - name: 保存日报与台账
+        if: steps.guard.outputs.needed == 'true'
         run: |
           git add reports
           if git diff --cached --quiet; then exit 0; fi
