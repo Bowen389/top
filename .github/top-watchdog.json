@@ -1,1 +1,6 @@
-{"purpose":"Independent post-close recovery trigger","requested_at":null}
+{
+  "purpose": "Independent post-close recovery trigger",
+  "market_date": "2026-11-09",
+  "requested_at": "2026-11-09T17:04:47+08:00",
+  "reason": "Current report missing, ledger last session 2026-11-06, and no eligible scan.yml run queued or running"
+}
