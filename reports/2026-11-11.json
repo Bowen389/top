@@ -1367,7 +1367,76 @@
       "provisional": false
     },
     "bf": {
-      "candidates": [],
+      "candidates": [
+        {
+          "code": "002463",
+          "name": "沪电股份",
+          "close": 89.43,
+          "status": "raw",
+          "S": 5973484997.856001,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        },
+        {
+          "code": "002980",
+          "name": "华盛昌",
+          "close": 75.82,
+          "status": "raw",
+          "S": 983329228.6459999,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        },
+        {
+          "code": "002913",
+          "name": "奥士康",
+          "close": 65.26,
+          "status": "raw",
+          "S": 919503703.3280001,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        },
+        {
+          "code": "001331",
+          "name": "胜通能源",
+          "close": 35.28,
+          "status": "raw",
+          "S": 387911403.5605,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        }
+      ],
       "meta": {
         "asof": "2026-11-11",
         "constituent_pool_size": 3050,
@@ -1605,12 +1674,9 @@
           "excluded_liquidity": 141,
           "missing_data": 14,
           "raw": 6
-        },
-        "unverified": [
-          "001331"
-        ]
+        }
       },
-      "error": "反包池存在尚未核验的涨停价，等待复核",
+      "error": null,
       "provisional": false
     },
     "fb": {
@@ -1622,5 +1688,5 @@
       "provisional": false
     }
   },
-  "updated_at": "2026-11-11T16:57:19.743877+08:00"
+  "updated_at": "2026-11-11T17:58:40.409729+08:00"
 }
