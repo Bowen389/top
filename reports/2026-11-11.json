@@ -1,0 +1,1626 @@
+{
+  "date": "2026-11-11",
+  "next_session": "2026-11-12",
+  "strategies": {
+    "lh": {
+      "candidates": [
+        {
+          "date": "2026-11-11",
+          "code": "603920",
+          "name": "世运电路",
+          "close": 39.42,
+          "gain_pct": 8.386,
+          "trade_id": "100443128",
+          "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+          "qualifying_amount_yuan": 160882876.77,
+          "reason": "institution_buy_sum_gt20m",
+          "n3_tag": "涨幅位于[7%, 9%)",
+          "volume_tag": "符合量价",
+          "volume_ratio_20": 1.5481086868177452,
+          "low_multiple_120": 1.3277197709666557
+        },
+        {
+          "date": "2026-11-11",
+          "code": "603040",
+          "name": "新坐标",
+          "close": 43.97,
+          "gain_pct": 10.0075,
+          "trade_id": "100443129",
+          "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+          "qualifying_amount_yuan": 30268595.56,
+          "reason": "institution_buy_sum_gt20m",
+          "n3_tag": "换手率未超过10%",
+          "volume_tag": "符合量价",
+          "volume_ratio_20": 2.352411455772346,
+          "low_multiple_120": 1.3243975903614464
+        }
+      ],
+      "meta": {
+        "isolated_rows": [
+          {
+            "code": "000632",
+            "name": "ST三木",
+            "reason": "ST excluded"
+          },
+          {
+            "code": "002726",
+            "name": "ST龙大",
+            "reason": "ST excluded"
+          },
+          {
+            "code": "002931",
+            "name": "锋龙股份",
+            "reason": "incomplete seat rows: sell"
+          },
+          {
+            "code": "300473",
+            "name": "德尔股份",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "300825",
+            "name": "阿尔特",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "300951",
+            "name": "博硕科技",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "300990",
+            "name": "同飞股份",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "301052",
+            "name": "果麦文化",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "301313",
+            "name": "凡拓数创",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "301486",
+            "name": "致尚科技",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "301591",
+            "name": "肯特股份",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "301596",
+            "name": "瑞迪智驱",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "301697",
+            "name": "贝特利",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "301718",
+            "name": "通则康威",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "600537",
+            "name": "*ST亿晶",
+            "reason": "ST excluded"
+          },
+          {
+            "code": "600715",
+            "name": "文投控股",
+            "reason": "incomplete seat rows: buy"
+          },
+          {
+            "code": "920045",
+            "name": "蘅东光",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "920085",
+            "name": "森峰激光",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "920157",
+            "name": "宇特光电",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "920202",
+            "name": "安达股份",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "920296",
+            "name": "文峰光电",
+            "reason": "outside 0/6 code scope"
+          },
+          {
+            "code": "920770",
+            "name": "艾能聚",
+            "reason": "outside 0/6 code scope"
+          }
+        ],
+        "seat_audit": [
+          {
+            "date": "2026-11-11",
+            "code": "000026",
+            "name": "飞亚达",
+            "close": 23.16,
+            "gain_pct": 10.0238,
+            "trade_id": "100442541",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "000520",
+            "name": "凤凰航运",
+            "close": 2.81,
+            "gain_pct": -5.0676,
+            "trade_id": "100442527",
+            "disclosure_reason": "连续三个交易日内，跌幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "000530",
+            "name": "冰山冷热",
+            "close": 11.28,
+            "gain_pct": 7.1225,
+            "trade_id": "100442557",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "000530",
+            "name": "冰山冷热",
+            "close": 11.28,
+            "gain_pct": 7.1225,
+            "trade_id": "100442558",
+            "disclosure_reason": "日换手率达到20%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "000593",
+            "name": "德龙汇能",
+            "close": 20.55,
+            "gain_pct": 6.4215,
+            "trade_id": "100442556",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "000678",
+            "name": "襄阳轴承",
+            "close": 21.19,
+            "gain_pct": 10.0208,
+            "trade_id": "100442540",
+            "disclosure_reason": "日换手率达到20%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "000678",
+            "name": "襄阳轴承",
+            "close": 21.19,
+            "gain_pct": 10.0208,
+            "trade_id": "100442528",
+            "disclosure_reason": "日涨幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "000678",
+            "name": "襄阳轴承",
+            "close": 21.19,
+            "gain_pct": 10.0208,
+            "trade_id": "100442538",
+            "disclosure_reason": "日振幅值达到15%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "001219",
+            "name": "青岛食品",
+            "close": 22.61,
+            "gain_pct": -9.992,
+            "trade_id": "100442533",
+            "disclosure_reason": "日跌幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "001226",
+            "name": "拓山重工",
+            "close": 44.75,
+            "gain_pct": 7.0318,
+            "trade_id": "100442532",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "001331",
+            "name": "胜通能源",
+            "close": 35.28,
+            "gain_pct": 10.0094,
+            "trade_id": "100442525",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "001339",
+            "name": "智微智能",
+            "close": 69.73,
+            "gain_pct": 10.0016,
+            "trade_id": "100442559",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "001381",
+            "name": "皇冠新材",
+            "close": 41.42,
+            "gain_pct": -3.7639,
+            "trade_id": "100442531",
+            "disclosure_reason": "日换手率达到20%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002086",
+            "name": "东方海洋",
+            "close": 4.69,
+            "gain_pct": 1.5152,
+            "trade_id": "100442562",
+            "disclosure_reason": "日换手率达到20%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002275",
+            "name": "桂林三金",
+            "close": 15.35,
+            "gain_pct": -9.1716,
+            "trade_id": "100442555",
+            "disclosure_reason": "日跌幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002281",
+            "name": "光迅科技",
+            "close": 103.93,
+            "gain_pct": 10.0021,
+            "trade_id": "100442544",
+            "disclosure_reason": "日涨幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002343",
+            "name": "慈文传媒",
+            "close": 9.7,
+            "gain_pct": 3.9657,
+            "trade_id": "100442539",
+            "disclosure_reason": "日换手率达到20%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002384",
+            "name": "东山精密",
+            "close": 92.06,
+            "gain_pct": 10.0012,
+            "trade_id": "100442536",
+            "disclosure_reason": "日涨幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002463",
+            "name": "沪电股份",
+            "close": 89.43,
+            "gain_pct": 10,
+            "trade_id": "100442545",
+            "disclosure_reason": "日涨幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002696",
+            "name": "百洋股份",
+            "close": 10.62,
+            "gain_pct": -8.9974,
+            "trade_id": "100442553",
+            "disclosure_reason": "日跌幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002708",
+            "name": "光洋股份",
+            "close": 26.59,
+            "gain_pct": 10.0124,
+            "trade_id": "100442535",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002731",
+            "name": "萃华退",
+            "close": 0.23,
+            "gain_pct": 4.5455,
+            "trade_id": "100442523",
+            "disclosure_reason": "退市整理期",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002779",
+            "name": "中坚科技",
+            "close": 100.5,
+            "gain_pct": 10.0044,
+            "trade_id": "100442534",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002913",
+            "name": "奥士康",
+            "close": 65.26,
+            "gain_pct": 9.9949,
+            "trade_id": "100442564",
+            "disclosure_reason": "连续三个交易日内，涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "002916",
+            "name": "深南电路",
+            "close": 229.02,
+            "gain_pct": 10,
+            "trade_id": "100442529",
+            "disclosure_reason": "日涨幅偏离值达到7%的前5只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "600103",
+            "name": "青山纸业",
+            "close": 3.28,
+            "gain_pct": 10.0671,
+            "trade_id": "100443131",
+            "disclosure_reason": "有价格涨跌幅限制的日收盘价格涨幅偏离值达到7%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "600127",
+            "name": "金健米业",
+            "close": 10.6,
+            "gain_pct": -3.1963,
+            "trade_id": "100443114",
+            "disclosure_reason": "有价格涨跌幅限制的日换手率达到20%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "600327",
+            "name": "大东方",
+            "close": 6.53,
+            "gain_pct": 9.9327,
+            "trade_id": "100443126",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "600776",
+            "name": "东方通信",
+            "close": 13.65,
+            "gain_pct": 9.9919,
+            "trade_id": "100443109",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "600838",
+            "name": "上海九百",
+            "close": 12.18,
+            "gain_pct": 2.1812,
+            "trade_id": "100443104",
+            "disclosure_reason": "有价格涨跌幅限制的日换手率达到20%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "600892",
+            "name": "大晟文化",
+            "close": 5.81,
+            "gain_pct": 3.75,
+            "trade_id": "100443108",
+            "disclosure_reason": "有价格涨跌幅限制的日换手率达到20%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "600892",
+            "name": "大晟文化",
+            "close": 5.81,
+            "gain_pct": 3.75,
+            "trade_id": "100443124",
+            "disclosure_reason": "有价格涨跌幅限制的日价格振幅达到15%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "601188",
+            "name": "龙江交通",
+            "close": 4.29,
+            "gain_pct": -6.9414,
+            "trade_id": "100443118",
+            "disclosure_reason": "有价格涨跌幅限制的日收盘价格跌幅偏离值达到7%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "601595",
+            "name": "上海电影",
+            "close": 46.83,
+            "gain_pct": 10.007,
+            "trade_id": "100443122",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "601599",
+            "name": "浙文影业",
+            "close": 5.55,
+            "gain_pct": -0.8929,
+            "trade_id": "100443115",
+            "disclosure_reason": "有价格涨跌幅限制的日换手率达到20%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "601599",
+            "name": "浙文影业",
+            "close": 5.55,
+            "gain_pct": -0.8929,
+            "trade_id": "100443135",
+            "disclosure_reason": "有价格涨跌幅限制的日价格振幅达到15%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603040",
+            "name": "新坐标",
+            "close": 43.97,
+            "gain_pct": 10.0075,
+            "trade_id": "100443129",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": 30268595.56,
+            "reason": "institution_buy_sum_gt20m",
+            "n3_tag": "换手率未超过10%",
+            "volume_tag": "符合量价",
+            "volume_ratio_20": 2.352411455772346,
+            "low_multiple_120": 1.3243975903614464
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603042",
+            "name": "华脉科技",
+            "close": 13.38,
+            "gain_pct": 10.0329,
+            "trade_id": "100443113",
+            "disclosure_reason": "有价格涨跌幅限制的日收盘价格涨幅偏离值达到7%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603258",
+            "name": "电魂网络",
+            "close": 18.32,
+            "gain_pct": 10.03,
+            "trade_id": "100443123",
+            "disclosure_reason": "有价格涨跌幅限制的日收盘价格涨幅偏离值达到7%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603330",
+            "name": "天洋新材",
+            "close": 10.53,
+            "gain_pct": 10.0313,
+            "trade_id": "100443110",
+            "disclosure_reason": "有价格涨跌幅限制的日收盘价格涨幅偏离值达到7%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603366",
+            "name": "日出东方",
+            "close": 11.97,
+            "gain_pct": 10.0184,
+            "trade_id": "100443105",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603381",
+            "name": "永臻股份",
+            "close": 21.4,
+            "gain_pct": -2.2385,
+            "trade_id": "100443121",
+            "disclosure_reason": "有价格涨跌幅限制的日换手率达到20%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603466",
+            "name": "风语筑",
+            "close": 16.86,
+            "gain_pct": 9.9804,
+            "trade_id": "100443107",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603536",
+            "name": "惠发食品",
+            "close": 11.85,
+            "gain_pct": 10.0279,
+            "trade_id": "100443106",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603660",
+            "name": "苏州科达",
+            "close": 10.5,
+            "gain_pct": 8.2474,
+            "trade_id": "100443120",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603706",
+            "name": "东方环宇",
+            "close": 24.43,
+            "gain_pct": 9.9955,
+            "trade_id": "100443119",
+            "disclosure_reason": "有价格涨跌幅限制的日价格振幅达到15%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603730",
+            "name": "岱美股份",
+            "close": 11.19,
+            "gain_pct": 10.0295,
+            "trade_id": "100443132",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "603920",
+            "name": "世运电路",
+            "close": 39.42,
+            "gain_pct": 8.386,
+            "trade_id": "100443128",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": 160882876.77,
+            "reason": "institution_buy_sum_gt20m",
+            "n3_tag": "涨幅位于[7%, 9%)",
+            "volume_tag": "符合量价",
+            "volume_ratio_20": 1.5481086868177452,
+            "low_multiple_120": 1.3277197709666557
+          },
+          {
+            "date": "2026-11-11",
+            "code": "605255",
+            "name": "天普股份",
+            "close": 61.01,
+            "gain_pct": 10.0072,
+            "trade_id": "100443112",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "605398",
+            "name": "新炬网络",
+            "close": 27.18,
+            "gain_pct": 5.5534,
+            "trade_id": "100443133",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "605488",
+            "name": "福莱新材",
+            "close": 63.03,
+            "gain_pct": 10,
+            "trade_id": "100443125",
+            "disclosure_reason": "非S证券连续三个交易日内收盘价格涨幅偏离值累计达到20%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "605577",
+            "name": "龙版传媒",
+            "close": 17.36,
+            "gain_pct": 0.463,
+            "trade_id": "100443111",
+            "disclosure_reason": "有价格涨跌幅限制的日价格振幅达到15%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "gain_below_5pct"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "688135",
+            "name": "利扬芯片",
+            "close": 35.02,
+            "gain_pct": 20.0137,
+            "trade_id": "100443116",
+            "disclosure_reason": "有价格涨跌幅限制的日收盘价格涨幅达到15%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "no_qualifying_institution_buy"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "688498",
+            "name": "源杰科技",
+            "close": 774.85,
+            "gain_pct": 19.9997,
+            "trade_id": "100443134",
+            "disclosure_reason": "有价格涨跌幅限制的日收盘价格涨幅达到15%的前五只证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          },
+          {
+            "date": "2026-11-11",
+            "code": "688801",
+            "name": "燧原科技",
+            "close": 494,
+            "gain_pct": 11.2738,
+            "trade_id": "100443127",
+            "disclosure_reason": "有价格涨跌幅限制的连续3个交易日内收盘价格涨幅偏离值累计达到30%的证券",
+            "qualifying_amount_yuan": null,
+            "reason": "institution_on_sell_side"
+          }
+        ],
+        "n3_error": null
+      },
+      "error": null,
+      "provisional": false
+    },
+    "n3": {
+      "candidates": [],
+      "meta": {},
+      "error": null,
+      "provisional": false
+    },
+    "v3": {
+      "candidates": [],
+      "meta": {
+        "status": "ok",
+        "source": "Sina CSI300 daily",
+        "date": "2026-11-11",
+        "close": 4075.709,
+        "ma20": 4083.34375,
+        "gate_allow": false,
+        "deviation_pct": -0.18697299241583476,
+        "raw_candidates": [
+          {
+            "code": "002425",
+            "name": "凯撒文化",
+            "signal_close_raw": 3.83,
+            "status": "ok",
+            "gain": 0.10057471264367801,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002779",
+            "name": "中坚科技",
+            "signal_close_raw": 100.5,
+            "status": "ok",
+            "gain": 0.10004378283712811,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600556",
+            "name": "天下秀",
+            "signal_close_raw": 5.46,
+            "status": "ok",
+            "gain": 0.05609284332688591,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "605598",
+            "name": "上海港湾",
+            "signal_close_raw": 29.66,
+            "status": "ok",
+            "gain": 0.05364120781527526,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002009",
+            "name": "天奇股份",
+            "signal_close_raw": 19.91,
+            "status": "ok",
+            "gain": 0.034823284823285006,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002291",
+            "name": "遥望科技",
+            "signal_close_raw": 6.11,
+            "status": "ok",
+            "gain": 0.030354131534570117,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600715",
+            "name": "文投控股",
+            "signal_close_raw": 3.14,
+            "status": "ok",
+            "gain": 0.10175438596491237,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603258",
+            "name": "电魂网络",
+            "signal_close_raw": 18.32,
+            "status": "ok",
+            "gain": 0.10030030030030024,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "000678",
+            "name": "襄阳轴承",
+            "signal_close_raw": 21.19,
+            "status": "ok",
+            "gain": 0.10020768431983385,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002708",
+            "name": "光洋股份",
+            "signal_close_raw": 26.59,
+            "status": "ok",
+            "gain": 0.10012412081092226,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "601595",
+            "name": "上海电影",
+            "signal_close_raw": 46.83,
+            "status": "ok",
+            "gain": 0.10007047216349552,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "605488",
+            "name": "福莱新材",
+            "signal_close_raw": 63.03,
+            "status": "ok",
+            "gain": 0.10000000000000009,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002164",
+            "name": "宁波东力",
+            "signal_close_raw": 21.91,
+            "status": "ok",
+            "gain": 0.09989959839357421,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603466",
+            "name": "风语筑",
+            "signal_close_raw": 16.86,
+            "status": "ok",
+            "gain": 0.09980430528375717,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "000530",
+            "name": "冰山冷热",
+            "signal_close_raw": 11.28,
+            "status": "ok",
+            "gain": 0.07122507122507127,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600261",
+            "name": "阳光照明",
+            "signal_close_raw": 6.25,
+            "status": "ok",
+            "gain": 0.06837606837606858,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "601689",
+            "name": "拓普集团",
+            "signal_close_raw": 51.25,
+            "status": "ok",
+            "gain": 0.05844692275919039,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "000700",
+            "name": "模塑科技",
+            "signal_close_raw": 17.09,
+            "status": "ok",
+            "gain": 0.05493827160493847,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603628",
+            "name": "清源股份",
+            "signal_close_raw": 11.26,
+            "status": "ok",
+            "gain": 0.050373134328358216,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603633",
+            "name": "徕木股份",
+            "signal_close_raw": 6.75,
+            "status": "ok",
+            "gain": 0.04489164086687314,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603721",
+            "name": "中广天择",
+            "signal_close_raw": 23.25,
+            "status": "ok",
+            "gain": 0.0379464285714286,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002292",
+            "name": "奥飞娱乐",
+            "signal_close_raw": 9.96,
+            "status": "ok",
+            "gain": 0.03319502074688807,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "001283",
+            "name": "豪鹏科技",
+            "signal_close_raw": 59.65,
+            "status": "ok",
+            "gain": 0.032900432900432985,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603286",
+            "name": "日盈电子",
+            "signal_close_raw": 62.51,
+            "status": "ok",
+            "gain": 0.026436781609195492,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002048",
+            "name": "宁波华翔",
+            "signal_close_raw": 21.38,
+            "status": "ok",
+            "gain": 0.024928092042185934,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600960",
+            "name": "渤海汽车",
+            "signal_close_raw": 4.56,
+            "status": "ok",
+            "gain": 0.01785714285714257,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "000559",
+            "name": "万向钱潮",
+            "signal_close_raw": 13.42,
+            "status": "ok",
+            "gain": 0.016666666666666607,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603081",
+            "name": "大丰实业",
+            "signal_close_raw": 11.78,
+            "status": "ok",
+            "gain": 0.01551724137931032,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002086",
+            "name": "东方海洋",
+            "signal_close_raw": 4.69,
+            "status": "ok",
+            "gain": 0.015151515151515138,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600802",
+            "name": "福建水泥",
+            "signal_close_raw": 7.81,
+            "status": "ok",
+            "gain": 0.00774193548387081,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603683",
+            "name": "晶华新材",
+            "signal_close_raw": 19.01,
+            "status": "ok",
+            "gain": 0.0058201058201059475,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603662",
+            "name": "柯力传感",
+            "signal_close_raw": 57.4,
+            "status": "ok",
+            "gain": 0.0047260633642569605,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "601916",
+            "name": "浙商银行",
+            "signal_close_raw": 2.98,
+            "status": "ok",
+            "gain": 0.0033670033670032407,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002578",
+            "name": "闽发铝业",
+            "signal_close_raw": 6.08,
+            "status": "ok",
+            "gain": 0.0033003300330034513,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002703",
+            "name": "浙江世宝",
+            "signal_close_raw": 16.56,
+            "status": "ok",
+            "gain": 0.10033222591362101,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "001339",
+            "name": "智微智能",
+            "signal_close_raw": 69.73,
+            "status": "ok",
+            "gain": 0.1000157753588895,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "002520",
+            "name": "日发精机",
+            "signal_close_raw": 7.26,
+            "status": "ok",
+            "gain": 0.10000000000000009,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600629",
+            "name": "华建集团",
+            "signal_close_raw": 15.19,
+            "status": "ok",
+            "gain": 0.099927588703838,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "603236",
+            "name": "移远通信",
+            "signal_close_raw": 86.57,
+            "status": "ok",
+            "gain": 0.054445797807551655,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "000888",
+            "name": "峨眉山Ａ",
+            "signal_close_raw": 10.57,
+            "status": "ok",
+            "gain": 0.0322265625,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "603122",
+            "name": "合富中国",
+            "signal_close_raw": 11.97,
+            "status": "ok",
+            "gain": 0.02658662092624353,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "002354",
+            "name": "天娱数科",
+            "signal_close_raw": 8.58,
+            "status": "ok",
+            "gain": 0.009411764705882675,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "603893",
+            "name": "瑞芯微",
+            "signal_close_raw": 235.01,
+            "status": "ok",
+            "gain": 0.007761578044596984,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          }
+        ],
+        "scan_counts": {
+          "ok": 960,
+          "missing_data": 9
+        }
+      },
+      "error": null,
+      "provisional": false
+    },
+    "s2": {
+      "candidates": [],
+      "meta": {
+        "market_cap_unverified": [],
+        "scan_counts": {
+          "no_trigger": 3038,
+          "excluded_st": 140,
+          "missing_data": 14
+        }
+      },
+      "error": null,
+      "provisional": false
+    },
+    "bf": {
+      "candidates": [],
+      "meta": {
+        "asof": "2026-11-11",
+        "constituent_pool_size": 3050,
+        "days": 20,
+        "I": 0.9720152903498143,
+        "ma20": 0.9568913306206032,
+        "deviation_pct": 1.5805305414777093,
+        "market_gate_pass": true,
+        "valid_returns_T": 3050,
+        "constituent_count_each_day": {
+          "2026-10-15": 3045,
+          "2026-10-16": 3045,
+          "2026-10-19": 3043,
+          "2026-10-20": 3043,
+          "2026-10-21": 3046,
+          "2026-10-22": 3046,
+          "2026-10-23": 3047,
+          "2026-10-26": 3045,
+          "2026-10-27": 3045,
+          "2026-10-28": 3045,
+          "2026-10-29": 3046,
+          "2026-10-30": 3046,
+          "2026-11-02": 3046,
+          "2026-11-03": 3048,
+          "2026-11-04": 3049,
+          "2026-11-05": 3050,
+          "2026-11-06": 3050,
+          "2026-11-09": 3050,
+          "2026-11-10": 3050,
+          "2026-11-11": 3050
+        },
+        "daily_market_returns": {
+          "2026-10-15": -0.02742592171144653,
+          "2026-10-16": 0.006358089652805496,
+          "2026-10-19": -0.0014578695966491445,
+          "2026-10-20": 0.0042970856148380554,
+          "2026-10-21": -0.001185069183811676,
+          "2026-10-22": -0.025204463768746115,
+          "2026-10-23": 0.01269067913505178,
+          "2026-10-26": -0.0030093891845250336,
+          "2026-10-27": -0.02205820009578267,
+          "2026-10-28": 0.011924774877412387,
+          "2026-10-29": -0.019683794475398236,
+          "2026-10-30": -0.024381241563799658,
+          "2026-11-02": 0.021001795191050433,
+          "2026-11-03": -0.0023090000902821653,
+          "2026-11-04": 0.017541951584888568,
+          "2026-11-05": 0.019442360803624704,
+          "2026-11-06": -0.015053501264506329,
+          "2026-11-09": 0.000594025303895897,
+          "2026-11-10": 0.013206450973033489,
+          "2026-11-11": 0.008763165720683018
+        },
+        "index_basis": "fixed 2026-11-03 non-ST 3050; historical ST may be included; active and valid prior-market-day return required",
+        "source": "TDX raw daily packages; no fill for suspensions",
+        "warning": "user-modified research strategy; not the original 3297 frozen universe; no historical backtest validation",
+        "raw_candidates": [
+          {
+            "code": "001331",
+            "name": "胜通能源",
+            "close": 35.28,
+            "status": "raw",
+            "S": 387911403.5605,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002463",
+            "name": "沪电股份",
+            "close": 89.43,
+            "status": "raw",
+            "S": 5973484997.856001,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002913",
+            "name": "奥士康",
+            "close": 65.26,
+            "status": "raw",
+            "S": 919503703.3280001,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002916",
+            "name": "深南电路",
+            "close": 229.02,
+            "status": "raw",
+            "S": 2739546140.8589997,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              0
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002980",
+            "name": "华盛昌",
+            "close": 75.82,
+            "status": "raw",
+            "S": 983329228.6459999,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "600776",
+            "name": "东方通信",
+            "close": 13.65,
+            "status": "raw",
+            "S": 191153161.5,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              0,
+              0
+            ],
+            "score": 1,
+            "category": "discard",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          }
+        ],
+        "selected_pool": [
+          {
+            "code": "002463",
+            "name": "沪电股份",
+            "close": 89.43,
+            "status": "raw",
+            "S": 5973484997.856001,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002980",
+            "name": "华盛昌",
+            "close": 75.82,
+            "status": "raw",
+            "S": 983329228.6459999,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "002913",
+            "name": "奥士康",
+            "close": 65.26,
+            "status": "raw",
+            "S": 919503703.3280001,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "001331",
+            "name": "胜通能源",
+            "close": 35.28,
+            "status": "raw",
+            "S": 387911403.5605,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          }
+        ],
+        "scan_counts": {
+          "no_raw_signal": 2719,
+          "excluded_basic": 168,
+          "limit_rule_or_ST_unverified": 144,
+          "excluded_liquidity": 141,
+          "missing_data": 14,
+          "raw": 6
+        },
+        "unverified": [
+          "001331"
+        ]
+      },
+      "error": "反包池存在尚未核验的涨停价，等待复核",
+      "provisional": false
+    },
+    "fb": {
+      "candidates": [],
+      "meta": {
+        "B_MA20": 0.01777436516303932
+      },
+      "error": null,
+      "provisional": false
+    }
+  },
+  "updated_at": "2026-11-11T16:57:19.743877+08:00"
+}
