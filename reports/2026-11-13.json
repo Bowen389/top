@@ -1,0 +1,827 @@
+{
+  "date": "2026-11-13",
+  "next_session": "2026-11-16",
+  "strategies": {
+    "lh": {
+      "candidates": [],
+      "meta": {},
+      "error": "Response ended prematurely",
+      "provisional": false
+    },
+    "n3": {
+      "candidates": [],
+      "meta": {},
+      "error": null,
+      "provisional": false
+    },
+    "v3": {
+      "candidates": [],
+      "meta": {
+        "status": "ok",
+        "source": "Sina CSI300 daily",
+        "date": "2026-11-13",
+        "close": 4016.29,
+        "ma20": 4069.5232499999997,
+        "gate_allow": false,
+        "deviation_pct": -1.30809548759796,
+        "raw_candidates": [
+          {
+            "code": "000819",
+            "name": "岳阳兴长",
+            "signal_close_raw": 12.82,
+            "status": "ok",
+            "gain": 0.10042918454935612,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600977",
+            "name": "中国电影",
+            "signal_close_raw": 17.05,
+            "status": "ok",
+            "gain": 0.10000000000000031,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002520",
+            "name": "日发精机",
+            "signal_close_raw": 7.7,
+            "status": "ok",
+            "gain": 0.10000000000000009,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002187",
+            "name": "广百股份",
+            "signal_close_raw": 6.97,
+            "status": "ok",
+            "gain": 0.09936908517350163,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603366",
+            "name": "日出东方",
+            "signal_close_raw": 13.9,
+            "status": "ok",
+            "gain": 0.05542900531511008,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002100",
+            "name": "天康生物",
+            "signal_close_raw": 8.59,
+            "status": "ok",
+            "gain": 0.028742514970059974,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "000651",
+            "name": "格力电器",
+            "signal_close_raw": 39.96,
+            "status": "ok",
+            "gain": 0.02751349961429672,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002931",
+            "name": "锋龙股份",
+            "signal_close_raw": 58.1,
+            "status": "ok",
+            "gain": 0.026501766784452263,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600715",
+            "name": "文投控股",
+            "signal_close_raw": 3.4,
+            "status": "ok",
+            "gain": 0.10032362459546929,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002425",
+            "name": "凯撒文化",
+            "signal_close_raw": 3.96,
+            "status": "ok",
+            "gain": 0.09999999999999987,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603286",
+            "name": "日盈电子",
+            "signal_close_raw": 64.91,
+            "status": "ok",
+            "gain": 0.09998305371970839,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "000596",
+            "name": "古井贡酒",
+            "signal_close_raw": 112.0,
+            "status": "ok",
+            "gain": 0.05860113421550106,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002948",
+            "name": "青岛银行",
+            "signal_close_raw": 6.53,
+            "status": "ok",
+            "gain": 0.03650793650793682,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603587",
+            "name": "地素时尚",
+            "signal_close_raw": 15.02,
+            "status": "ok",
+            "gain": 0.03443526170798905,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "605338",
+            "name": "巴比食品",
+            "signal_close_raw": 21.31,
+            "status": "ok",
+            "gain": 0.031961259079903215,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "601169",
+            "name": "北京银行",
+            "signal_close_raw": 6.16,
+            "status": "ok",
+            "gain": 0.024958402662229595,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "000001",
+            "name": "平安银行",
+            "signal_close_raw": 12.07,
+            "status": "ok",
+            "gain": 0.02374893977947412,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600919",
+            "name": "江苏银行",
+            "signal_close_raw": 13.23,
+            "status": "ok",
+            "gain": 0.022411128284389514,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "601818",
+            "name": "光大银行",
+            "signal_close_raw": 3.22,
+            "status": "ok",
+            "gain": 0.018987341772152,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002164",
+            "name": "宁波东力",
+            "signal_close_raw": 23.71,
+            "status": "ok",
+            "gain": 0.008078231292517168,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002242",
+            "name": "九阳股份",
+            "signal_close_raw": 26.75,
+            "status": "ok",
+            "gain": 0.0037523452157599557,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600410",
+            "name": "华胜天成",
+            "signal_close_raw": 14.3,
+            "status": "ok",
+            "gain": 0.10000000000000009,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "605318",
+            "name": "法狮龙",
+            "signal_close_raw": 84.26,
+            "status": "ok",
+            "gain": 0.10000000000000009,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "002739",
+            "name": "儒意电影",
+            "signal_close_raw": 10.05,
+            "status": "ok",
+            "gain": 0.09956236323851209,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "000034",
+            "name": "神州数码",
+            "signal_close_raw": 21.82,
+            "status": "ok",
+            "gain": 0.05359729599227436,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "603118",
+            "name": "共进股份",
+            "signal_close_raw": 13.37,
+            "status": "ok",
+            "gain": 0.052755905511810974,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "603477",
+            "name": "巨星农牧",
+            "signal_close_raw": 15.92,
+            "status": "ok",
+            "gain": 0.051519154557463365,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "600845",
+            "name": "宝信软件",
+            "signal_close_raw": 16.79,
+            "status": "ok",
+            "gain": 0.04415422885572151,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "600895",
+            "name": "张江高科",
+            "signal_close_raw": 26.35,
+            "status": "ok",
+            "gain": 0.03944773175542404,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "000066",
+            "name": "中国长城",
+            "signal_close_raw": 12.22,
+            "status": "ok",
+            "gain": 0.03647158608990675,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "000333",
+            "name": "美的集团",
+            "signal_close_raw": 90.55,
+            "status": "ok",
+            "gain": 0.02909421525173328,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "002714",
+            "name": "牧原股份",
+            "signal_close_raw": 45.84,
+            "status": "ok",
+            "gain": 0.02757229320780108,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "002261",
+            "name": "拓维信息",
+            "signal_close_raw": 22.15,
+            "status": "ok",
+            "gain": 0.02736549165120583,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "601000",
+            "name": "唐山港",
+            "signal_close_raw": 5.0,
+            "status": "ok",
+            "gain": 0.026694045174537884,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600887",
+            "name": "伊利股份",
+            "signal_close_raw": 31.74,
+            "status": "ok",
+            "gain": 0.023870967741935756,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "000536",
+            "name": "华映科技",
+            "signal_close_raw": 3.13,
+            "status": "ok",
+            "gain": 0.022875816993464193,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "601825",
+            "name": "沪农商行",
+            "signal_close_raw": 9.37,
+            "status": "ok",
+            "gain": 0.021810250817884347,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600908",
+            "name": "无锡银行",
+            "signal_close_raw": 6.14,
+            "status": "ok",
+            "gain": 0.021630615640599204,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600795",
+            "name": "国电电力",
+            "signal_close_raw": 5.48,
+            "status": "ok",
+            "gain": 0.020484171322160183,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600660",
+            "name": "福耀玻璃",
+            "signal_close_raw": 56.86,
+            "status": "ok",
+            "gain": 0.01808415398388541,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "603323",
+            "name": "苏农银行",
+            "signal_close_raw": 4.63,
+            "status": "ok",
+            "gain": 0.015350877192982448,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600926",
+            "name": "杭州银行",
+            "signal_close_raw": 17.52,
+            "status": "ok",
+            "gain": 0.015063731170336103,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600566",
+            "name": "济川药业",
+            "signal_close_raw": 30.0,
+            "status": "ok",
+            "gain": 0.00435219283562116,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          }
+        ],
+        "scan_counts": {
+          "ok": 960,
+          "missing_data": 9
+        }
+      },
+      "error": null,
+      "provisional": false
+    },
+    "s2": {
+      "candidates": [],
+      "meta": {
+        "market_cap_unverified": [
+          {
+            "code": "000819",
+            "name": "岳阳兴长",
+            "signal_close_raw": 12.82,
+            "signal_factor": 1.0000000000000002,
+            "status": "triggered",
+            "first_date": "2026-11-02",
+            "trigger_pct": 10.042918454935613,
+            "support_adjusted": 11.407199999999998,
+            "market_cap_status": "unverified",
+            "market_cap_error": "HTTPSConnectionPool(host='push2.eastmoney.com', port=443): Read timed out. (read timeout=20)"
+          }
+        ],
+        "scan_counts": {
+          "no_trigger": 3036,
+          "excluded_st": 140,
+          "triggered": 1,
+          "missing_data": 12
+        }
+      },
+      "error": null,
+      "provisional": true
+    },
+    "bf": {
+      "candidates": [],
+      "meta": {
+        "asof": "2026-11-13",
+        "constituent_pool_size": 3050,
+        "days": 20,
+        "I": 0.9636008278827082,
+        "ma20": 0.9751826064244625,
+        "deviation_pct": -1.1876522884487595,
+        "market_gate_pass": false,
+        "valid_returns_T": 3047,
+        "constituent_count_each_day": {
+          "2026-10-19": 3043,
+          "2026-10-20": 3043,
+          "2026-10-21": 3046,
+          "2026-10-22": 3046,
+          "2026-10-23": 3047,
+          "2026-10-26": 3045,
+          "2026-10-27": 3045,
+          "2026-10-28": 3045,
+          "2026-10-29": 3046,
+          "2026-10-30": 3046,
+          "2026-11-02": 3046,
+          "2026-11-03": 3048,
+          "2026-11-04": 3049,
+          "2026-11-05": 3050,
+          "2026-11-06": 3050,
+          "2026-11-09": 3050,
+          "2026-11-10": 3050,
+          "2026-11-11": 3050,
+          "2026-11-12": 3049,
+          "2026-11-13": 3047
+        },
+        "daily_market_returns": {
+          "2026-10-19": -0.0014578695966491445,
+          "2026-10-20": 0.0042970856148380554,
+          "2026-10-21": -0.001185069183811676,
+          "2026-10-22": -0.025204463768746115,
+          "2026-10-23": 0.01269067913505178,
+          "2026-10-26": -0.0030093891845250336,
+          "2026-10-27": -0.02205820009578267,
+          "2026-10-28": 0.011924774877412387,
+          "2026-10-29": -0.019683794475398236,
+          "2026-10-30": -0.024381241563799658,
+          "2026-11-02": 0.021001795191050433,
+          "2026-11-03": -0.0023090000902821653,
+          "2026-11-04": 0.017541951584888568,
+          "2026-11-05": 0.019442360803624704,
+          "2026-11-06": -0.015053501264506329,
+          "2026-11-09": 0.000594025303895897,
+          "2026-11-10": 0.013206450973033489,
+          "2026-11-11": 0.008763165720683018,
+          "2026-11-12": -0.01264421286178335,
+          "2026-11-13": -0.01728943739192702
+        },
+        "index_basis": "fixed 2026-11-03 non-ST 3050; historical ST may be included; active and valid prior-market-day return required",
+        "source": "TDX raw daily packages; no fill for suspensions",
+        "warning": "user-modified research strategy; not the original 3297 frozen universe; no historical backtest validation",
+        "raw_candidates": [
+          {
+            "code": "000595",
+            "name": "新能股份",
+            "close": 5.53,
+            "status": "raw",
+            "S": 116353432.776,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              0,
+              0
+            ],
+            "score": 1,
+            "category": "discard",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          },
+          {
+            "code": "001393",
+            "name": "维通利",
+            "close": 43.14,
+            "status": "raw",
+            "S": 114168566.301,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              0,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          },
+          {
+            "code": "600715",
+            "name": "文投控股",
+            "close": 3.4,
+            "status": "raw",
+            "S": 973337186.4,
+            "prior_limits": 3,
+            "score_bits": [
+              0,
+              1,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": true,
+            "bf_static_ok": false
+          },
+          {
+            "code": "603286",
+            "name": "日盈电子",
+            "close": 64.91,
+            "status": "raw",
+            "S": 385100494.95,
+            "prior_limits": 2,
+            "score_bits": [
+              0,
+              1,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          }
+        ],
+        "selected_pool": [
+          {
+            "code": "600715",
+            "name": "文投控股",
+            "close": 3.4,
+            "status": "raw",
+            "S": 973337186.4,
+            "prior_limits": 3,
+            "score_bits": [
+              0,
+              1,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": true,
+            "bf_static_ok": false
+          },
+          {
+            "code": "603286",
+            "name": "日盈电子",
+            "close": 64.91,
+            "status": "raw",
+            "S": 385100494.95,
+            "prior_limits": 2,
+            "score_bits": [
+              0,
+              1,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "001393",
+            "name": "维通利",
+            "close": 43.14,
+            "status": "raw",
+            "S": 114168566.301,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              0,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          }
+        ],
+        "scan_counts": {
+          "no_raw_signal": 2689,
+          "excluded_basic": 181,
+          "limit_rule_or_ST_unverified": 143,
+          "excluded_liquidity": 159,
+          "raw": 4,
+          "missing_data": 13
+        },
+        "unverified": [
+          "600715"
+        ]
+      },
+      "error": "反包池存在尚未核验的涨停价，等待复核",
+      "provisional": false
+    },
+    "fb": {
+      "candidates": [],
+      "meta": {},
+      "error": "HTTPSConnectionPool(host='quotes.sina.cn', port=443): Read timed out. (read timeout=25)",
+      "provisional": false
+    }
+  },
+  "updated_at": "2026-11-13T16:54:50.629335+08:00"
+}
