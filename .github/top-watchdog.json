@@ -1,6 +1,6 @@
 {
   "purpose": "Independent post-close recovery trigger",
   "market_date": "2026-11-13",
-  "requested_at": "2026-11-13T16:54:31+08:00",
-  "reason": "Current report missing, ledger last session 2026-11-12, and no eligible scan.yml run queued or running"
+  "requested_at": "2026-11-13T17:54:36+08:00",
+  "reason": "Current report is incomplete: LH response ended prematurely, S2 is provisional, BF has unverified limit-up prices, and FB quote retrieval timed out. Ledger is current and no eligible scan.yml run is queued or running."
 }
