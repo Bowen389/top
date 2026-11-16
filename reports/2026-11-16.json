@@ -1487,7 +1487,25 @@
       "provisional": false
     },
     "bf": {
-      "candidates": [],
+      "candidates": [
+        {
+          "code": "001318",
+          "name": "阳光乳业",
+          "close": 14.62,
+          "status": "raw",
+          "S": 557943851.948,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        }
+      ],
       "meta": {
         "asof": "2026-11-16",
         "constituent_pool_size": 3050,
@@ -1623,12 +1641,9 @@
           "excluded_liquidity": 163,
           "missing_data": 13,
           "raw": 3
-        },
-        "unverified": [
-          "001318"
-        ]
+        }
       },
-      "error": "反包池存在尚未核验的涨停价，等待复核",
+      "error": null,
       "provisional": false
     },
     "fb": {
@@ -1737,5 +1752,5 @@
       "provisional": false
     }
   },
-  "updated_at": "2026-11-16T17:10:18.014274+08:00"
+  "updated_at": "2026-11-16T18:51:08.786784+08:00"
 }
