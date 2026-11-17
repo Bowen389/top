@@ -1220,7 +1220,42 @@
       "provisional": false
     },
     "bf": {
-      "candidates": [],
+      "candidates": [
+        {
+          "code": "600410",
+          "name": "华胜天成",
+          "close": 15.29,
+          "status": "raw",
+          "S": 933282194.6,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        },
+        {
+          "code": "002889",
+          "name": "东方嘉盛",
+          "close": 15.21,
+          "status": "raw",
+          "S": 578683367.7705,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        }
+      ],
       "meta": {
         "asof": "2026-11-17",
         "constituent_pool_size": 3050,
@@ -1356,12 +1391,9 @@
           "excluded_liquidity": 167,
           "missing_data": 9,
           "raw": 2
-        },
-        "unverified": [
-          "600410"
-        ]
+        }
       },
-      "error": "反包池存在尚未核验的涨停价，等待复核",
+      "error": null,
       "provisional": false
     },
     "fb": {
@@ -1502,5 +1534,5 @@
       "provisional": false
     }
   },
-  "updated_at": "2026-11-17T16:53:12.843286+08:00"
+  "updated_at": "2026-11-17T17:57:53.246325+08:00"
 }
