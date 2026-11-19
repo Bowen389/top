@@ -24,7 +24,18 @@ def quote(row):
   if any(not isinstance(v,(int,float)) for v in fields):return {'quote_status':'missing_price','quote_timestamp':ts.isoformat()}
   match=abs(float(j['f43'])-row['close_raw'])<.001 and abs(float(j['f51'])-row['upper'])<.001 and abs(float(j['f60'])-row['prev_ref'])<.001
   return {'quote_status':'verified' if match else 'mismatch','quote_timestamp':ts.isoformat(),'actual_upper_T':j['f51'],'actual_lower_T':j['f52'],'actual_prev_ref_T':j['f60'],'actual_close_T':j['f43']}
- except Exception as e:return {'quote_status':'fetch_failure','error':str(e)}
+ except Exception as e:
+  try:
+   symbol=('sh' if code.startswith('6') else 'sz')+code
+   response=requests.get('https://qt.gtimg.cn/q='+symbol,timeout=15,headers={'Referer':'https://gu.qq.com/'})
+   response.raise_for_status();response.encoding='gb18030';f=response.text.split('"')[1].split('~')
+   ts=datetime.datetime.strptime(f[30],'%Y%m%d%H%M%S').replace(tzinfo=ZoneInfo('Asia/Shanghai'))
+   if ts.date().isoformat()!=T or (ts.hour,ts.minute)<(15,0):raise ValueError('Tencent quote date/window mismatch')
+   close,prev,upper,lower=map(float,(f[3],f[4],f[47],f[48]))
+   if not upper>lower>0:raise ValueError('Tencent limit fields invalid')
+   match=abs(close-row['close_raw'])<.001 and abs(upper-row['upper'])<.001 and abs(prev-row['prev_ref'])<.001
+   return {'quote_status':'verified' if match else 'mismatch','source':'Tencent','quote_timestamp':ts.isoformat(),'actual_upper_T':upper,'actual_lower_T':lower,'actual_prev_ref_T':prev,'actual_close_T':close}
+  except Exception as backup:return {'quote_status':'fetch_failure','error':str(e)+'; Tencent: '+str(backup)}
 rows=cap.to_dict('records');records=[]
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
  results=list(pool.map(quote,rows))
