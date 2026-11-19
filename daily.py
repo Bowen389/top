@@ -336,14 +336,11 @@ def publish(plan, book, note):
 
 def main():
     now = dt.datetime.now(ZoneInfo("Asia/Shanghai"))
-    day = now.date().isoformat()
     retry_only = "--retry-missing" in sys.argv
-    if now.weekday() >= 5 or now.time() < dt.time(15, 5):
-        return
     from exchange_calendars import get_calendar
     cal = get_calendar("XSHG")
-    if not cal.is_session(day):
-        return
+    cutoff = now.date() - dt.timedelta(days=int(now.time() < dt.time(15, 5)))
+    day = cal.date_to_session(str(cutoff), direction='previous').date().isoformat()
     note = ""
     book = read(REPORTS / "book.json", {"accounts": {
         key: {"cash": 200000, "positions": {}} for key in STRATEGIES},
