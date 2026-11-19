@@ -1,0 +1,607 @@
+{
+  "date": "2026-11-19",
+  "next_session": "2026-11-20",
+  "strategies": {
+    "lh": {
+      "candidates": [],
+      "meta": {},
+      "error": "两次披露快照不一致",
+      "provisional": false
+    },
+    "n3": {
+      "candidates": [],
+      "meta": {},
+      "error": null,
+      "provisional": false
+    },
+    "v3": {
+      "candidates": [],
+      "meta": {
+        "status": "ok",
+        "source": "Sina CSI300 daily",
+        "date": "2026-11-19",
+        "close": 3984.84,
+        "ma20": 4042.0233000000007,
+        "gate_allow": false,
+        "deviation_pct": -1.4147197023827274,
+        "raw_candidates": [
+          {
+            "code": "600863",
+            "name": "华能蒙电",
+            "signal_close_raw": 5.66,
+            "status": "ok",
+            "gain": 0.04814814814814827,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603885",
+            "name": "吉祥航空",
+            "signal_close_raw": 10.83,
+            "status": "ok",
+            "gain": 0.03044719314938149,
+            "strength": 3,
+            "conditions": [
+              true,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "605338",
+            "name": "巴比食品",
+            "signal_close_raw": 23.4,
+            "status": "ok",
+            "gain": 0.06654512306289884,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603587",
+            "name": "地素时尚",
+            "signal_close_raw": 15.99,
+            "status": "ok",
+            "gain": 0.031612903225806566,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600690",
+            "name": "海尔智家",
+            "signal_close_raw": 23.15,
+            "status": "ok",
+            "gain": 0.02433628318584069,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "600993",
+            "name": "马应龙",
+            "signal_close_raw": 26.43,
+            "status": "ok",
+            "gain": 0.017712745475548797,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "002557",
+            "name": "洽洽食品",
+            "signal_close_raw": 20.99,
+            "status": "ok",
+            "gain": 0.0014312977099237845,
+            "strength": 2,
+            "conditions": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "code": "603078",
+            "name": "江化微",
+            "signal_close_raw": 26.86,
+            "status": "ok",
+            "gain": 0.09991809991809975,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "002077",
+            "name": "大港股份",
+            "signal_close_raw": 12.11,
+            "status": "ok",
+            "gain": 0.09990917347865569,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "603486",
+            "name": "科沃斯",
+            "signal_close_raw": 50.33,
+            "status": "ok",
+            "gain": 0.07657754010695172,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "002582",
+            "name": "好想你",
+            "signal_close_raw": 10.18,
+            "status": "ok",
+            "gain": 0.052740434332988695,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "000158",
+            "name": "常山北明",
+            "signal_close_raw": 13.03,
+            "status": "ok",
+            "gain": 0.048270313757039496,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "603629",
+            "name": "利通电子",
+            "signal_close_raw": 63.42,
+            "status": "ok",
+            "gain": 0.04086656819300849,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "002745",
+            "name": "木林森",
+            "signal_close_raw": 10.09,
+            "status": "ok",
+            "gain": 0.04020618556701061,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "600031",
+            "name": "三一重工",
+            "signal_close_raw": 18.9,
+            "status": "ok",
+            "gain": 0.02383531960996743,
+            "strength": 1,
+            "conditions": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "code": "600887",
+            "name": "伊利股份",
+            "signal_close_raw": 32.91,
+            "status": "ok",
+            "gain": 0.01605433775856735,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "601021",
+            "name": "春秋航空",
+            "signal_close_raw": 45.71,
+            "status": "ok",
+            "gain": 0.01105950011059531,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "000423",
+            "name": "东阿阿胶",
+            "signal_close_raw": 53.21,
+            "status": "ok",
+            "gain": 0.010828267477203557,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600406",
+            "name": "国电南瑞",
+            "signal_close_raw": 24.84,
+            "status": "ok",
+            "gain": 0.009756097560975618,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600312",
+            "name": "平高电气",
+            "signal_close_raw": 22.29,
+            "status": "ok",
+            "gain": 0.008141112618724522,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "code": "600941",
+            "name": "中国移动",
+            "signal_close_raw": 107.8,
+            "status": "ok",
+            "gain": 0.003911342894393766,
+            "strength": 1,
+            "conditions": [
+              false,
+              false,
+              true
+            ]
+          }
+        ],
+        "scan_counts": {
+          "ok": 960,
+          "missing_data": 9
+        }
+      },
+      "error": null,
+      "provisional": false
+    },
+    "s2": {
+      "candidates": [],
+      "meta": {
+        "market_cap_unverified": [],
+        "scan_counts": {
+          "no_trigger": 3040,
+          "excluded_st": 140,
+          "missing_data": 10
+        }
+      },
+      "error": null,
+      "provisional": false
+    },
+    "bf": {
+      "candidates": [
+        {
+          "code": "000678",
+          "name": "襄阳轴承",
+          "close": 16.74,
+          "status": "raw",
+          "S": 2249497018.4660006,
+          "prior_limits": 1,
+          "score_bits": [
+            1,
+            1,
+            1
+          ],
+          "score": 3,
+          "category": "A",
+          "previous_broken_limit": false,
+          "bf_static_ok": true
+        }
+      ],
+      "meta": {
+        "asof": "2026-11-19",
+        "constituent_pool_size": 3050,
+        "days": 20,
+        "I": 0.9287382652648646,
+        "ma20": 0.9854629027164206,
+        "deviation_pct": -5.756141331672149,
+        "market_gate_pass": false,
+        "valid_returns_T": 3045,
+        "constituent_count_each_day": {
+          "2026-10-23": 3047,
+          "2026-10-26": 3045,
+          "2026-10-27": 3045,
+          "2026-10-28": 3045,
+          "2026-10-29": 3046,
+          "2026-10-30": 3046,
+          "2026-11-02": 3046,
+          "2026-11-03": 3048,
+          "2026-11-04": 3049,
+          "2026-11-05": 3050,
+          "2026-11-06": 3050,
+          "2026-11-09": 3050,
+          "2026-11-10": 3050,
+          "2026-11-11": 3050,
+          "2026-11-12": 3049,
+          "2026-11-13": 3047,
+          "2026-11-16": 3046,
+          "2026-11-17": 3046,
+          "2026-11-18": 3046,
+          "2026-11-19": 3045
+        },
+        "daily_market_returns": {
+          "2026-10-23": 0.01269067913505178,
+          "2026-10-26": -0.0030093891845250336,
+          "2026-10-27": -0.02205820009578267,
+          "2026-10-28": 0.011924774877412387,
+          "2026-10-29": -0.019683794475398236,
+          "2026-10-30": -0.024381241563799658,
+          "2026-11-02": 0.021001795191050433,
+          "2026-11-03": -0.0023090000902821653,
+          "2026-11-04": 0.017541951584888568,
+          "2026-11-05": 0.019442360803624704,
+          "2026-11-06": -0.015053501264506329,
+          "2026-11-09": 0.000594025303895897,
+          "2026-11-10": 0.013206450973033489,
+          "2026-11-11": 0.008763165720683018,
+          "2026-11-12": -0.01264421286178335,
+          "2026-11-13": -0.01728943739192702,
+          "2026-11-16": -0.01521690116585037,
+          "2026-11-17": -0.013038837386994042,
+          "2026-11-18": -0.009639263051631947,
+          "2026-11-19": -0.022336809325340573
+        },
+        "index_basis": "fixed 2026-11-03 non-ST 3050; historical ST may be included; active and valid prior-market-day return required",
+        "source": "TDX raw daily packages; no fill for suspensions",
+        "warning": "user-modified research strategy; not the original 3297 frozen universe; no historical backtest validation",
+        "raw_candidates": [
+          {
+            "code": "000678",
+            "name": "襄阳轴承",
+            "close": 16.74,
+            "status": "raw",
+            "S": 2249497018.4660006,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "603078",
+            "name": "江化微",
+            "close": 26.86,
+            "status": "raw",
+            "S": 310938472.75,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              0
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          },
+          {
+            "code": "603928",
+            "name": "兴业股份",
+            "close": 12.38,
+            "status": "raw",
+            "S": 147769073.9,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              0,
+              0
+            ],
+            "score": 1,
+            "category": "discard",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          },
+          {
+            "code": "603931",
+            "name": "格林达",
+            "close": 29.15,
+            "status": "raw",
+            "S": 114921600.6,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              0,
+              1
+            ],
+            "score": 2,
+            "category": "B",
+            "previous_broken_limit": false,
+            "bf_static_ok": false
+          }
+        ],
+        "selected_pool": [
+          {
+            "code": "000678",
+            "name": "襄阳轴承",
+            "close": 16.74,
+            "status": "raw",
+            "S": 2249497018.4660006,
+            "prior_limits": 1,
+            "score_bits": [
+              1,
+              1,
+              1
+            ],
+            "score": 3,
+            "category": "A",
+            "previous_broken_limit": false,
+            "bf_static_ok": true
+          }
+        ],
+        "scan_counts": {
+          "no_raw_signal": 2655,
+          "excluded_basic": 211,
+          "limit_rule_or_ST_unverified": 144,
+          "excluded_liquidity": 166,
+          "raw": 4,
+          "missing_data": 10
+        }
+      },
+      "error": null,
+      "provisional": false
+    },
+    "fb": {
+      "candidates": [
+        {
+          "code": "600520",
+          "name": "三佳科技",
+          "close": 22.17,
+          "pos60_med": 0.8614792646430097,
+          "money_t": 242865529.0,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "601616",
+          "name": "广电电气",
+          "close": 3.74,
+          "pos60_med": 0.9054593874833551,
+          "money_t": 148024383.0,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "603078",
+          "name": "江化微",
+          "close": 26.86,
+          "pos60_med": 0.8572933122696161,
+          "money_t": 1274536742.0,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "603928",
+          "name": "兴业股份",
+          "close": 12.38,
+          "pos60_med": 0.9679414003044131,
+          "money_t": 626540442.0,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "603931",
+          "name": "格林达",
+          "close": 29.15,
+          "pos60_med": 0.8325479107759974,
+          "money_t": 177536484.0,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "605178",
+          "name": "时空科技",
+          "close": 53.25,
+          "pos60_med": 0.7624222379714937,
+          "money_t": 163051350.0,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "000656",
+          "name": "金科股份",
+          "close": 1.02,
+          "pos60_med": 0.7815126050420175,
+          "money_t": 613915072.85,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "002077",
+          "name": "大港股份",
+          "close": 12.11,
+          "pos60_med": 0.8868304470398716,
+          "money_t": 608433053.04,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "002146",
+          "name": "荣盛发展",
+          "close": 1.02,
+          "pos60_med": 0.8086956521739133,
+          "money_t": 360609817.4,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "002165",
+          "name": "红 宝 丽",
+          "close": 6.3,
+          "pos60_med": 0.8438880706921944,
+          "money_t": 306855437.84,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "002418",
+          "name": "康盛股份",
+          "close": 4.02,
+          "pos60_med": 0.8869987849331707,
+          "money_t": 236014780.0,
+          "B_MA20": -0.07219861723263488
+        },
+        {
+          "code": "002579",
+          "name": "中京电子",
+          "close": 12.17,
+          "pos60_med": 0.7572749058541592,
+          "money_t": 915331536.1,
+          "B_MA20": -0.07219861723263488
+        }
+      ],
+      "meta": {
+        "B_MA20": -0.07219861723263488
+      },
+      "error": null,
+      "provisional": false
+    }
+  },
+  "updated_at": "2026-11-19T16:56:01.719987+08:00"
+}
