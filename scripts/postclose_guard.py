@@ -42,4 +42,8 @@ if __name__ == '__main__':
     now = dt.datetime.now(ZoneInfo('Asia/Shanghai'))
     day = now.date().isoformat()
     needed = needs_scan(now, read(root/'reports'/f'{day}.json'), read(root/'reports'/'book.json'))
+    # A delayed overnight run must recover the latest closed session. daily.py
+    # resolves its date with the exchange calendar after dependencies are ready.
+    if now.time() < dt.time(15, 5):
+        needed = True
     print('true' if needed else 'false')
