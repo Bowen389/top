@@ -1,8 +1,9 @@
 name: 六策略盘后预选与模拟记账
 on:
   schedule:
-    - cron: '50 8 * * MON-FRI'
-    - cron: '30 9 * * MON-FRI'
+    # GitHub native schedule; UTC -> Asia/Shanghai 17:00 / 18:00
+    - cron: '0 9 * * 1-5'
+    - cron: '0 10 * * 1-5'
   workflow_dispatch:
   push:
     branches: [main]
