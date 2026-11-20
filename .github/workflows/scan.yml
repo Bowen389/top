@@ -1,11 +1,12 @@
 name: 六策略盘后预选与模拟记账
 on:
   schedule:
-    # GitHub native schedule; UTC -> Asia/Shanghai 17:00 / 18:00
-    - cron: '0 9 * * 1-5'
+    # 16:50 全组最早（guard 下限 16:45）｜17:30 补扫｜18:00｜21:00｜次日 08:30
+    - cron: '50 8 * * 1-5'
+    - cron: '30 9 * * 1-5'
     - cron: '0 10 * * 1-5'
-    - cron: '0 13 * * 1-5'  # 盘后兜底补丁新增
-    - cron: '30 0 * * 2-6'  # 盘后兜底补丁新增
+    - cron: '0 13 * * 1-5'
+    - cron: '30 0 * * 2-6'
   workflow_dispatch:
   push:
     branches: [main]
