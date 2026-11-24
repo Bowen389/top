@@ -1,6 +1,6 @@
 {
   "purpose": "Independent post-close recovery trigger",
-  "market_date": "2026-11-23",
-  "requested_at": "2026-11-23T16:52:42+08:00",
-  "reason": "Current report reports/2026-11-23.json is missing; book.last_session is 2026-11-20; no main scan.yml runs exist today after 16:45 Beijing time."
+  "market_date": "2026-11-24",
+  "requested_at": "2026-11-24T16:58:59+08:00",
+  "reason": "Current report reports/2026-11-24.json is missing; book.last_session is 2026-11-23; no main scan.yml runs exist today after 16:45 Beijing time."
 }
